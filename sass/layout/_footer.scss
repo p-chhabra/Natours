@@ -1,0 +1,86 @@
+.footer{
+    margin-top: 0;
+    background-color: $color-dark-grey-2;
+    padding-bottom: 20rem;
+    padding-top: 10rem;
+
+    @include respond(tab-port){
+        padding-bottom: 8rem;
+    }
+
+    &__logo-box{
+        text-align: center;
+    }
+
+    &__logo{
+        width: 15rem;
+        height: auto;
+        margin-bottom: 8rem;
+
+        @include respond(tab-port){
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__navigation{
+        border-top: 1px solid $color-grey-light-2;
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include respond(tab-port){
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link{
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        &:link, 
+        &:visited{
+            text-decoration: none;
+            color: $color-grey-light-1;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        &:hover{
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba(black ,0.4);
+        }
+
+    }
+
+    &__copyright{
+        color: $color-grey-light-1;
+        font-size: $default-font-size;
+        font-weight: 300;
+        line-height: 3rem;
+        border-top: 1px solid $color-grey-light-2;
+        padding-top: 2rem;
+        display: inline-block;
+        float: right;
+        width: 80%;
+
+        @include respond(tab-port){
+            display: block;
+            text-align: center;
+            float: none;
+            width: 100%;
+        }
+
+    }
+
+}

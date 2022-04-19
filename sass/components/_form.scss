@@ -1,0 +1,55 @@
+.form{
+
+    overflow: hidden;
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__input{
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba(white, .5);
+        font-family: inherit;
+        border: none;
+        border-bottom: 3px solid transparent;
+        display: block;
+        width: 90%;
+        transition: all .4s;
+
+        @include respond(tab-port){
+            width: 100%;
+        }
+
+        &::-webkit-input-placeholder{
+            color: $color-dark-grey;
+        }
+    }
+
+    &__input:focus{
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(black, .1);
+        border-bottom: 3px solid $color-primary;
+    }
+
+    &__group-radio{
+        display: inline-block;
+        margin-right: 4rem;
+    }
+
+    &__radio-group{
+        width: 40%;
+
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+
+    &__radio-label{
+        font-size: $default-font-size;
+        cursor: pointer;
+        font-weight: 700;
+    }
+}

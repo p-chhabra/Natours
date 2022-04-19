@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; //deafault desktop size 
+
+    @include respond(big-desktop){
+        font-size: 50%;  // 12px/16px = 75%
+    }
+
+    @include respond(tab-land){
+        font-size: 56.25%;  // 9px/16px = 56.25%
+    }
+
+    @include respond(tab-port){
+        font-size: 50%;  // 8px/16px = 50%
+    }
+
+    @include respond(phone){
+        font-size: 50%;
+    }
+
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+
+    @include respond(phone){
+        padding: 0;
+    }
+    
+}
+
